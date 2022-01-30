@@ -1,0 +1,378 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  min-height: 110vh;
+}
+
+.primary-header {
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(12, 15, 12);
+  font-family: "Ubuntu";
+}
+
+#navbar {
+  top: -100px;
+  transition: top 0.3s;
+}
+
+.top-navigation {
+  position: relative;
+  display: flex;
+}
+
+.logo {
+  margin: 1rem 2rem;
+  width: 200px;
+}
+
+.menu {
+  font-size: 18px;
+  display: flex;
+  margin: 0;
+  padding: 150px 50px;
+  background: hsl(120 11% 5% / 0.7);
+  position: fixed;
+  inset: 0;
+  gap: 2rem;
+  flex-direction: column;
+  list-style: none;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
+}
+
+.menu[data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.page-content {
+  min-height: 1000px;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .menu {
+    background: hsl(120 11% 5% / 0.5);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.menu a {
+  position: relative;
+  color: #40ba86;
+  text-decoration: none;
+}
+
+.menu a::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 0px;
+  bottom: -10px;
+  height: 3px;
+  border-radius: 15px;
+  background: #40ba86;
+  transition: width 350ms;
+}
+
+.footer-content a::after {
+  display: block;
+  position: relative;
+  content: "";
+  left: 0;
+  width: 0;
+  bottom: -15px;
+  height: 3px;
+  border-radius: 15px;
+  background: #40ba86;
+  transition: width 350ms;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.footer-content a:hover::after {
+  width: 100%;
+}
+
+.menu li a > span {
+  margin-right: 10px;
+}
+.mobile-nav-button {
+  z-index: 9999;
+  position: absolute;
+  border: none;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: url("../images/bars-solid.svg") no-repeat;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.mobile-nav-button[aria-expanded="true"] {
+  background: url("../images/circle-xmark-solid.svg");
+  animation-name: popup-x;
+  animation-duration: 350ms;
+}
+
+.mobile-nav-button[aria-expanded="false"] {
+  background: url("../images/bars-solid.svg");
+  animation-name: popup-bars;
+  animation-duration: 350ms;
+}
+
+@keyframes popup-x {
+  0% {
+    transform: scale(0%);
+  }
+  50% {
+    transform: scale(120%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes popup-bars {
+  0% {
+    transform: scale(0%);
+  }
+  50% {
+    transform: scale(120%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+.mockup {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
+}
+
+.mockups-container {
+  display: flex;
+  align-items: center;
+  min-height: 1150px;
+  overflow-y: hidden;
+}
+
+.mockup-background {
+  height: 1000px;
+  width: 100%;
+  filter: blur(2rem);
+  z-index: -1;
+}
+
+.slide-left {
+  animation-name: slide-left-x;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+.slide-right {
+  animation-name: slide-right-x;
+  animation-duration: 1s;
+}
+
+@keyframes slide-right-x {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-left-x {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.mockup-background-image {
+  object-fit: cover;
+  width: 100%;
+  height: 1000px;
+}
+
+.back,
+.next {
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 1;
+  height: 45px;
+  aspect-ratio: 1;
+  transition: transform 350ms;
+}
+
+.back:hover,
+.next:hover {
+  transform: scale(120%);
+}
+
+.back {
+  background: url("/assets/images/circle-left-solid.svg") no-repeat;
+  border: none;
+  left: 10px;
+}
+
+.next {
+  background: url("/assets/images/circle-right-solid.svg") no-repeat;
+  border: none;
+  right: 10px;
+}
+
+.text-container {
+  line-height: 1.5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
+}
+
+.text-container > p {
+  font-weight: 300;
+  margin: 50px 30px;
+}
+
+.text-container > h2 {
+  margin: 0 60px;
+}
+
+.text-container > h2::after {
+  top: 20px;
+  display: block;
+  position: relative;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #000;
+}
+
+.shop {
+  font-family: Ubuntu, "Ubuntu";
+  border: #40ba86 solid 2px;
+  padding: 15px 40px;
+  background: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: border-color, color, background-color 350ms;
+  color: #40ba86;
+  text-decoration: none;
+}
+
+.shop:hover {
+  color: #fff;
+  border-color: rgb(12, 15, 12);
+  background-color: rgb(12, 15, 12);
+}
+
+.footer {
+  margin-top: 150px;
+  font-family: Ubuntu;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  background: rgb(12, 15, 12);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  padding: 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer-content li a > span {
+  margin-right: 10px;
+}
+
+.footer-content a {
+  color: #40ba86;
+  text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+  .mobile-nav-button {
+    display: none;
+  }
+  .menu {
+    font-size: 14px;
+    display: flex;
+    padding: 0;
+    position: relative;
+    inset: 0;
+    flex-direction: row;
+    align-items: center;
+    transform: translateX(0%);
+    background: none;
+  }
+
+  .text-container > h2::after {
+    width: 400px;
+  }
+
+  .text-container > h2 {
+    margin: 0;
+  }
+
+  .text-container > p {
+    width: 50%;
+    margin: 70px 0px;
+  }
+
+  .text-container {
+    text-align: left;
+    margin: 50px;
+  }
+
+  .menu:last-child {
+    margin-right: 2rem;
+  }
+
+  .mockup {
+    object-fit: contain;
+  }
+
+  .back {
+    height: 55px;
+    left: 20px;
+  }
+
+  .next {
+    height: 55px;
+    right: 20px;
+  }
+}
