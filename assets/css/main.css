@@ -248,6 +248,9 @@ body {
   background: url("/assets/images/angle-left-solid.svg") no-repeat;
   border: none;
   right: 10px;
+}
+
+#next {
   rotate: 180deg;
 }
 
@@ -388,6 +391,5 @@ body {
   .next {
     height: 55px;
     right: 50px;
-    rotate: 180deg;
   }
 }
