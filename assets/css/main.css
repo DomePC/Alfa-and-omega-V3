@@ -277,7 +277,7 @@ body {
 
 .text-container > p {
   font-weight: 300;
-  margin: 50px 30px;
+  margin: 65px 40px;
 }
 
 .text-container h1 {
@@ -335,8 +335,8 @@ body {
 }
 
 .footer {
-  margin-top: 150px;
-  font-size: 15px;
+  margin-top: 450px;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   background: rgb(12, 15, 12);
