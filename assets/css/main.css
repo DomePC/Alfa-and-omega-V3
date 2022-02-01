@@ -345,6 +345,16 @@ body {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #fff;
+    background: #0c0b0b;
+  }
+  .text-container h2::after {
+    background: #1a3529;
+  }
+}
+
 @media all and (min-width: 768px) {
   .mobile-nav-button {
     display: none;
