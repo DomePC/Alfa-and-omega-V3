@@ -5,6 +5,9 @@ let mockups = [
   "white-t-shirt.png",
   "hoddie-black.png",
   "mug.png",
+  "black-hoddie.png",
+  "t-shirt-black-txt.png",
+  "two-mugs.png",
 ];
 let body = document.querySelector("body");
 let menu = document.querySelector(".menu");

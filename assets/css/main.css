@@ -234,6 +234,7 @@ body {
   height: 45px;
   aspect-ratio: 1;
   transition: transform 350ms;
+  opacity: 0.6;
   background: url("/assets/images/angle-left-solid.svg") no-repeat;
 }
 
