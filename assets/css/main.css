@@ -234,8 +234,7 @@ body {
   background: url("/assets/images/angle-left-solid.svg") no-repeat;
 }
 
-.back:hover,
-.next:hover {
+.back:hover {
   transform: scale(120%);
 }
 
@@ -245,13 +244,13 @@ body {
 }
 
 .next {
-  background: url("/assets/images/angle-left-solid.svg") no-repeat;
   border: none;
   right: 10px;
+  transform: rotate(180deg);
 }
 
-#next {
-  rotate: 180deg;
+.next:hover {
+  transform: rotate(180deg) scale(120%);
 }
 
 .text-container {
