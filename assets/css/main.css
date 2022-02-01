@@ -161,7 +161,6 @@ body {
 }
 
 .mockup {
-  top: 0;
   position: absolute;
   width: 100%;
   padding: 50px 0;
@@ -174,7 +173,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 700px;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .mockup-background {
@@ -228,12 +227,12 @@ body {
 .back,
 .next {
   z-index: 1;
-  position: relative;
+  position: absolute;
   cursor: pointer;
-  aspect-ratio: 1;
   height: 45px;
   aspect-ratio: 1;
   transition: transform 350ms;
+  background: url("/assets/images/angle-left-solid.svg") no-repeat;
 }
 
 .back:hover,
@@ -242,21 +241,21 @@ body {
 }
 
 .back {
-  background: url("/assets/images/angle-left-solid.svg") no-repeat;
   border: none;
   left: 10px;
 }
 
 .next {
-  background: url("/assets/images/angle-right-solid.svg") no-repeat;
+  background: url("/assets/images/angle-left-solid.svg") no-repeat;
   border: none;
   right: 10px;
+  rotate: 180deg;
 }
 
 .text-container {
   line-height: 1.5;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 50px;
+  margin-top: 100px;
   position: relative;
   text-align: center;
 }
@@ -372,30 +371,23 @@ body {
 
   .text-container {
     text-align: left;
-    margin: 50px;
+    margin: 100px 50px;
   }
 
-  .menu:last-child {
-    margin-right: 2rem;
-  }
-
-  .mockup {
-    height: 1000px;
-  }
-
+  .mockup,
   .mockups-container,
-  .mockups-background-image,
-  .mockups-background {
+  .mockup-background-image,
+  .mockup-background {
     height: 1000px;
   }
 
   .back {
     height: 55px;
-    left: 20px;
+    left: 50px;
   }
 
   .next {
     height: 55px;
-    right: 20px;
+    right: 50px;
   }
 }
