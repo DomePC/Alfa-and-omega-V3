@@ -1,14 +1,19 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-  margin: 0;
   background: #fff;
   min-height: 110vh;
 }
 
 .primary-header {
+  padding: 2rem;
+  height: 100px;
   z-index: 100;
   width: 100%;
   position: fixed;
@@ -17,7 +22,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background: rgb(12, 15, 12);
-  font-family: "Ubuntu";
 }
 
 #navbar {
@@ -31,15 +35,16 @@ body {
 }
 
 .logo {
-  margin: 1rem 2rem;
-  width: 200px;
+  width: 220px;
 }
 
 .menu {
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
   display: flex;
   margin: 0;
-  padding: 150px 50px;
   background: hsl(120 11% 5% / 0.7);
   position: fixed;
   inset: 0;
@@ -112,10 +117,10 @@ body {
   z-index: 9999;
   position: absolute;
   border: none;
-  width: 2rem;
+  width: 2.5rem;
+  right: 2rem;
   aspect-ratio: 1;
   background: url("../images/bars-solid.svg") no-repeat;
-  right: 2rem;
   cursor: pointer;
 }
 
@@ -159,19 +164,21 @@ body {
   top: 0;
   position: absolute;
   width: 100%;
-  height: 1000px;
-  object-fit: cover;
+  padding: 50px 0;
+  height: 700px;
+  object-fit: contain;
 }
 
 .mockups-container {
   display: flex;
   align-items: center;
-  min-height: 1150px;
+  justify-content: center;
+  min-height: 700px;
   overflow-y: hidden;
 }
 
 .mockup-background {
-  height: 1000px;
+  height: 700px;
   width: 100%;
   filter: blur(2rem);
   z-index: -1;
@@ -215,7 +222,7 @@ body {
 .mockup-background-image {
   object-fit: cover;
   width: 100%;
-  height: 1000px;
+  height: 800px;
 }
 
 .back,
@@ -235,13 +242,13 @@ body {
 }
 
 .back {
-  background: url("/assets/images/circle-left-solid.svg") no-repeat;
+  background: url("/assets/images/angle-left-solid.svg") no-repeat;
   border: none;
   left: 10px;
 }
 
 .next {
-  background: url("/assets/images/circle-right-solid.svg") no-repeat;
+  background: url("/assets/images/angle-right-solid.svg") no-repeat;
   border: none;
   right: 10px;
 }
@@ -259,8 +266,14 @@ body {
   margin: 50px 30px;
 }
 
+.text-container > h1 {
+  font-size: 40px;
+}
+
 .text-container > h2 {
   margin: 0 60px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .text-container > h2::after {
@@ -269,13 +282,12 @@ body {
   position: relative;
   content: "";
   width: 100%;
-  height: 4px;
+  height: 3px;
   border-radius: 20px;
   background-color: #000;
 }
 
 .shop {
-  font-family: Ubuntu, "Ubuntu";
   border: #40ba86 solid 2px;
   padding: 15px 40px;
   background: none;
@@ -296,7 +308,6 @@ body {
 
 .footer {
   margin-top: 150px;
-  font-family: Ubuntu;
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -313,6 +324,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   list-style: none;
+  font-weight: 500;
 }
 
 .footer-content li a > span {
@@ -335,17 +347,22 @@ body {
     position: relative;
     inset: 0;
     flex-direction: row;
-    align-items: center;
+    justify-content: none;
     transform: translateX(0%);
     background: none;
   }
 
   .text-container > h2::after {
-    width: 400px;
+    width: 500px;
   }
 
   .text-container > h2 {
     margin: 0;
+    font-size: 25px;
+  }
+
+  .text-container > h1 {
+    font-size: 55px;
   }
 
   .text-container > p {
@@ -363,7 +380,13 @@ body {
   }
 
   .mockup {
-    object-fit: contain;
+    height: 1000px;
+  }
+
+  .mockups-container,
+  .mockups-background-image,
+  .mockups-background {
+    height: 1000px;
   }
 
   .back {
