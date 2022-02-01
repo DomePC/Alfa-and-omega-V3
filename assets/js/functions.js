@@ -1,12 +1,12 @@
 let slider_mockups = document.querySelector(".mockup");
 let background = document.querySelector(".mockup-background-image");
 let mockups = [
+  "t-shirt-black-txt.png",
   "black-t-shirt.png",
   "white-t-shirt.png",
   "hoddie-black.png",
   "mug.png",
   "black-hoddie.png",
-  "t-shirt-black-txt.png",
   "two-mugs.png",
 ];
 let body = document.querySelector("body");

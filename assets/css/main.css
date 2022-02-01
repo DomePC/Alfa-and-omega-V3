@@ -54,6 +54,16 @@ body {
   transition: transform 350ms ease-out;
 }
 
+.footer-content li:last-of-type {
+  color: #40ba86;
+  opacity: 0.1;
+  font-size: 14px;
+}
+
+.se {
+  width: 200px;
+}
+
 .menu[data-visible="true"] {
   transform: translateX(0%);
 }
