@@ -119,20 +119,23 @@ body {
   width: 2.5rem;
   right: 2rem;
   aspect-ratio: 1;
-  background: url("../images/bars-solid.svg") no-repeat;
+  background: url("../images/bars-solid.svg");
   cursor: pointer;
+  background-repeat: no-repeat;
 }
 
 .mobile-nav-button[aria-expanded="true"] {
   background: url("../images/circle-xmark-solid.svg");
   animation-name: popup-x;
   animation-duration: 350ms;
+  background-repeat: no-repeat;
 }
 
 .mobile-nav-button[aria-expanded="false"] {
   background: url("../images/bars-solid.svg");
   animation-name: popup-bars;
   animation-duration: 350ms;
+  background-repeat: no-repeat;
 }
 
 @keyframes popup-x {
@@ -271,12 +274,18 @@ body {
 }
 
 .text-container > div {
-  background: linear-gradient(45deg, #40ba86, #101110);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  background-size: 100%;
+  color: #40ba86;
+}
+
+@supports (background-clip: text) {
+  .text-container > div {
+    background: linear-gradient(45deg, #40ba86, #101110);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+  }
 }
 
 .text-container h2 {
