@@ -39,7 +39,7 @@
   border: 6px solid #40ba86;
 }
 
-.text-container:nth-child(3) {
+.text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,15 +56,26 @@
 }
 
 @media all and (min-width: 768px) {
+  * {
+    text-align: center;
+  }
   .companies-container {
     padding: 100px 0px;
   }
   .companies-container > p {
-    text-align: center;
     width: 500px;
     padding: 40px;
   }
-  .text-container:nth-child(3) {
-    text-align: center;
+
+  .text-container h2::after {
+    margin: auto;
+    top: 20px;
+    display: block;
+    position: relative;
+    content: "";
+    width: 100%;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #1a3529;
   }
 }
