@@ -67,6 +67,10 @@
     padding: 40px;
   }
 
+  .text-container {
+    top: 00px;
+  }
+
   .text-container h2::after {
     margin: auto;
     top: 20px;
